@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joshua Vidal | Portfolio</title>
+  <meta name="description" content="Portfolio of Joshua Vidal, Software Engineer and Application Support: experience, projects, education, certifications and contact details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;var a=JSON.parse(localStorage.getItem('a11y')||'{}'),d=document.documentElement;if(a.fs)d.style.fontSize=[100,112,125,140][a.fs]+'%';var m={font:'readable',spacing:'wide',contrast:'high',links:'on',motion:'off'};for(var k in m)if(a[k])d.dataset[k]=m[k]}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="dots" aria-hidden="true"></canvas>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+      <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+      <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+      <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+      <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-filter" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4H14M10 4H3M21 12H12M8 12H3M21 20H16M12 20H3M14 2v4M8 10v4M16 18v4"/></symbol>
+      <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></symbol>
+      <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></symbol>
+      <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
+      <symbol id="i-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></symbol>
+      <symbol id="i-kanban" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v7M12 7v4M16 7v9"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m7-7-7 7-7-7"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+      <symbol id="i-joshy" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10.5h.01M15 10.5h.01"/><path d="M9 14c.8 1 1.8 1.5 3 1.5s2.2-.5 3-1.5"/></symbol>
+      <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M4.5 8.5 12 10l7.5-1.5"/><path d="M12 10v4.5"/><path d="m12 14.5-3.2 6M12 14.5l3.2 6"/></symbol>
+      <symbol id="i-text" viewBox="0 0 24 24"><path d="m3 17 5-12 5 12M5 13h6"/><path d="M15 17h6M18 11v6" /></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+      <symbol id="i-folder-open" viewBox="0 0 24 24"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-pen-tool" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
+      <symbol id="i-clapper" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+      <symbol id="i-brush" viewBox="0 0 24 24"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></symbol>
+      <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+      <symbol id="i-basketball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/><path d="M4.9 4.9c3.3 3.3 3.3 10.9 0 14.2M19.1 4.9c-3.3 3.3-3.3 10.9 0 14.2"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    </defs>
+  </svg>
+
+
+  <header class="top">
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <a class="brand" href="#home">Joshua Vidal</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#stack">Tech Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#requirements">Requirements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="id-scene" id="id-scene">
+        <svg class="id-strap" viewBox="0 0 300 480" aria-hidden="true" focusable="false">
+          <path class="band" id="id-band" d="M150 -30 L150 80"/>
+          <text dy="3.3"><textPath href="#id-band" startOffset="3%">HIRE ME &#8226; JOSHUA VIDAL &#8226; HIRE ME &#8226; JOSHUA VIDAL &#8226; HIRE ME &#8226; JOSHUA VIDAL &#8226;</textPath></text>
+        </svg>
+        <div class="id-rig" id="id-rig">
+          <span class="id-clip" aria-hidden="true"></span>
+          <div class="id-card" id="id-card" role="button" tabindex="0" aria-label="Joshua Vidal's ID card: unemployed, hire me now. Drag to swing it, or press to go to the contact section.">
+            <div class="id-photo"><b aria-hidden="true">JV</b><img src="assets/images/profile.jpg" alt="Joshua Vidal" draggable="false" onerror="this.style.display='none'"></div>
+            <p class="id-name">Joshua Vidal</p>
+            <p class="id-role">Software Engineer</p>
+            <p class="id-status"><i></i>Unemployed </p>
+            <p class="id-cta">Hire me now</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="kicker">Available for new opportunities</p>
+        <h1><span class="greet">Hi, I'm</span>Joshua Vidal</h1>
+        <p class="role"><span>Software Engineer</span><i aria-hidden="true"></i><span>Application Support</span></p>
+        <p class="lead">Aspiring Software Engineer/Application Support Professional with hands-on experience in IT support, full-stack web development, & data management. Skilled in troubleshooting technical issues, maintaining business applications, & developing web-based solutions, seeking opportunities in Application/IT Support, or Software Development.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="assets/files/resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+      <div class="gallery-wrap">
+        <div class="gallery" id="gallery" tabindex="0" role="group" aria-roledescription="photo gallery" aria-label="Photos of Joshua Vidal. Use the left and right arrow keys to switch photos.">
+          <figure class="photo" data-pos="0">
+            <img src="assets/images/profile-3.jpg" alt="Photo of Joshua Vidal" onerror="this.style.display='none'">
+            <span>Add profile.jpg</span>
+          </figure>
+          <figure class="photo" data-pos="1">
+            <img src="assets/images/profile-2.jpg" alt="Second photo of Joshua Vidal" onerror="this.style.display='none'">
+            <span>Add profile-2.jpg</span>
+          </figure>
+          <figure class="photo" data-pos="2">
+            <img src="assets/images/profile.jpg" alt="Third photo of Joshua Vidal" onerror="this.style.display='none'">
+            <span>Add profile-3.jpg</span>
+          </figure>
+        </div>
+        <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+        <span id="g-count" class="sr-only" aria-live="polite">Photo 1 of 3</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="plate reveal">
+      <h2>About me</h2>
+      <div class="two-col">
+        <div>
+          <p>I am Joshua Vidal, an Information Technology graduate from the Polytechnic University of the Philippines – Taguig Campus, based in Taguig City, Philippines. I am passionate about technology and enjoy finding practical solutions to technical challenges, whether through troubleshooting, developing applications, or improving existing systems.</p>
+          <p>I aim to further develop my expertise in Application Support, IT Operations, and Software Development while contributing to reliable systems and meaningful technology solutions.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Location</dt><dd>Bicutan, North Daang Hari, Taguig City Metro Manila, Philippines</dd></div>
+          <div><dt>Current role</dt><dd>Software Engineer | Application Support</dd></div>
+          <div><dt>Languages</dt><dd>English, Filipino</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="stack" class="plate reveal">
+      <h2>My tech stacks</h2>
+      <div class="stack">
+        <div class="stack-group">
+          <h4>Front end</h4>
+          <ul class="chips">
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg" data-fb="https://cdn.simpleicons.org/tailwindcss" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Tailwind CSS</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg" data-fb="https://cdn.simpleicons.org/vuedotjs" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Vue</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" data-fb="https://cdn.simpleicons.org/react" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">React</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Back end</h4>
+          <ul class="chips">
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/laravel/laravel-original.svg" data-fb="https://cdn.simpleicons.org/laravel" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Laravel</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/springboot" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Spring Boot</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" data-fb="https://cdn.simpleicons.org/nodedotjs" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Node.js</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Programming languages</h4>
+          <ul class="chips">
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" data-fb="https://cdn.simpleicons.org/javascript" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">JavaScript</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" data-fb="https://cdn.simpleicons.org/typescript" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">TypeScript</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg" data-fb="https://cdn.simpleicons.org/php" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">PHP</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" data-fb="https://cdn.simpleicons.org/openjdk" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Java</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" data-fb="https://cdn.simpleicons.org/python" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Python</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" data-fb="https://cdn.simpleicons.org/cplusplus" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">C++</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Tools</h4>
+          <ul class="chips">
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" data-fb="https://cdn.simpleicons.org/git" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Git</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" data-fb="https://cdn.simpleicons.org/github" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">GitHub</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/visual-studio-code.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Visual Studio Code</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/cursor" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cursor.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Cursor</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/netbeans/netbeans-original.svg" data-fb="https://cdn.simpleicons.org/apachenetbeanside" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Apache NetBeans</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/selenium/selenium-original.svg" data-fb="https://cdn.simpleicons.org/selenium" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Selenium</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postman/postman-original.svg" data-fb="https://cdn.simpleicons.org/postman" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Postman</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-office.svg" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-365.svg" data-g="i-file" alt="" width="20" height="20" loading="lazy" decoding="async">Microsoft Office</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/google/google-original.svg" data-fb="https://cdn.simpleicons.org/google" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Google Workspace</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/powerbi" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/power-bi.svg" data-g="i-chart" alt="" width="20" height="20" loading="lazy" decoding="async">Power BI</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/notion/notion-original.svg" data-fb="https://cdn.simpleicons.org/notion" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Notion</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jira/jira-original.svg" data-fb="https://cdn.simpleicons.org/jira" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Jira</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/openai" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/chatgpt.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">ChatGPT</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/claude" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/claude-ai.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Claude Code</li>
+            <li><img class="ico" src="https://cdn.simpleicons.org/githubcopilot" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-copilot.svg" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Copilot</li>
+            <li><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg" data-fb="https://cdn.simpleicons.org/figma" data-g="i-code" alt="" width="20" height="20" loading="lazy" decoding="async">Figma</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Skills</h4>
+          <ul class="chips">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg>Generative AI</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg>Network Troubleshooting</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg>Hardware Troubleshooting</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-bug"/></svg>Software Troubleshooting</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg>Data Warehousing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-filter"/></svg>Data Cleaning</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>System Testing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg>System Configuration</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-headset"/></svg>Application Support</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pointer"/></svg>Manual Testing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg>Automated Testing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-package"/></svg>Asset Management</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-kanban"/></svg>Project Management</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Hobbies</h4>
+          <ul class="chips">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg>Photography</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pen-tool"/></svg>Graphic Designing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-clapper"/></svg>Video Editing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg>Photo Editing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-brush"/></svg>Digital Drawing</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-gamepad"/></svg>E-sports Games</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-basketball"/></svg>Basketball</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="plate reveal">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">2026 to 2026</p>
+          <div>
+            <h3>IT Support and Helpdesk Associate Intern</h3>
+            <p class="org">Department of Trade and Industry, Makati City</p>
+            <ul>
+              <li>Provided application support and contributed to the development, maintenance, and testing of internal web- based systems, specifically the Equipment Inventory Management System (EIMS), while managing equipment records, monitoring data, and preparing reports for the ISMS Division.</li>
+              <li>Delivered face-to-face IT support to DTI employees and government officials, troubleshooting desktop, laptop, and printer issues, configuring peripherals, installing software, and assessing and prioritizing technical requests based on urgency and business requirements.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">2025 to 2026</p>
+          <div>
+            <h3>Web Developer</h3>
+            <p class="org">Radio Engineering Circle Inc., Taguig City</p>
+            <ul>
+              <li>Developed this client-based thesis capstone project by leveraging AI-assisted development tools, including Claude, ChatGPT, and Cursor, for code development and complex project workflows; integrated RESTful APIs and a Botpress AI-powered self-learning chatbot to enhance system functionality and user interaction.</li>
+              <li>Developed the MIMSREC web application using Laravel framework, PHP, Node.js, MySQL, & Tailwind CSS, while collaborating within an Agile development team, utilizing Git/GitHub/Docker for version control, Selenium for automated testing and CI/CD practices to support development, testing, & deployment.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">2024 to 2026</p>
+          <div>
+            <h3>Data Entry/Encoder</h3>
+            <p class="org">US Title Network and Georgetown County, Taguig City</p>
+            <ul>
+              <li>Worked as a Freelance Data Encoder, handling outsourced data encoding for U.S. county property records, including various deed types. Downloaded, converted, and organized files into Microsoft Excel spreadsheets for submission to the assigned handler.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p class="when">2022 to 2026  </p>
+          <div>
+            <h3>Hello World</h3>
+            <p class="org">Polytechnic University of the Philippines - Taguig Campus</p>
+            <ul>
+              <li>BSIT Student | My first Hello World!</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="plate reveal">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="shot" data-zoom><img src="assets/images/project-1.jpg" alt="Screenshot of Project One" onerror="this.style.display='none'"><span>project-1.jpg</span></div>
+          <h3>DTI Equipment Inventory Management System <br> | DTI-EIMS</h3>
+          <p class="tags">PHP, Laravel, MySQL, TailwindCSS, JavaScript, Gemini Chatbot, RESTful APIs</p>
+          <p class="links"><a href="https://github.com/ItsJsh1/Equipment-Inventory-Management-System.git" target="_blank" rel="noopener">Source code</a></p>
+        </article>
+        <article class="project">
+          <div class="shot" data-zoom><img src="assets/images/project-2.jpg" alt="Screenshot of Project Two" onerror="this.style.display='none'"><span>project-2.jpg</span></div>
+          <h3>RECInc.  Membership Information Management System | REC-MIMS</h3>
+          <p class="tags">PHP, Laravel, MySQL, TailwindCSS, JavaScript, Botpress AI, RESTful APIs</p>
+          <p class="links"><a href="https://beta.rec.org.ph/" target="_blank" rel="noopener">Live site</a> <a href="https://github.com/JanLeoEgamen/REC_MIMS.git" target="_blank" rel="noopener">Source code</a></p>
+        </article>
+        <article class="project">
+          <div class="shot" data-zoom><img src="assets/images/project-3.jpg" alt="Screenshot of Project Three" onerror="this.style.display='none'"><span>project-3.jpg</span></div>
+          <h3>Faculty Data Management Evaluation Research Repository | PUP-FESR</h3>
+          <p class="tags">Selenium, MySQL Workbench</p>
+          <p class="links"><a href="https://github.com/PUPT-HRIS/PUPTHRIS.git" target="_blank" rel="noopener">Source code</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION + CERTIFICATIONS -->
+    <section id="education" class="plate reveal">
+      <h2>Education</h2>
+      <ol class="timeline has-gallery">
+        <li>
+          <p class="when">2022 to 2026</p>
+          <div>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p class="org">Polytechnic University of the Philippines - Taguig Campus</p>
+            <p><strong>Cum Laude</strong></p>
+            <p><strong>President's Lister</strong></p>
+            <p><strong>L.A.N.I Scholar</strong></p>
+            <p>@iskolarngbayan</p>
+          </div>
+          <div class="gallery-wrap edu">
+            <div class="gallery wide" tabindex="0" role="group" aria-roledescription="photo gallery" aria-label="Education photos. Use the left and right arrow keys to switch photos.">
+              <figure class="photo" data-pos="0">
+                <img src="assets/images/education-1.jpg" alt="Education photo 1" onerror="this.style.display='none'">
+                <span>Add education-1.jpg</span>
+              </figure>
+              <figure class="photo" data-pos="1">
+                <img src="assets/images/education-2.jpg" alt="Education photo 2" onerror="this.style.display='none'">
+                <span>Add education-2.jpg</span>
+              </figure>
+              <figure class="photo" data-pos="2">
+                <img src="assets/images/education-4.jpg" alt="Education photo 3" onerror="this.style.display='none'">
+                <span>Add education-3.jpg</span>
+              </figure>
+            </div>
+            <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+            <span class="sr-only" aria-live="polite">Photo 1 of 3</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="certifications" class="plate reveal">
+      <h2>Certifications</h2>
+      <ul class="certs">
+        <li class="cert">
+          <figure class="shot contain">
+            <img src="assets/images/cert-1.jpg" alt="Certificate: Google IT Support Professional Certificate" onerror="this.style.display='none'">
+            <span>Add cert-1.jpg</span>
+          </figure>
+          <strong>Google IT Support <br> Professional Certificate</strong>
+          <span class="issuer">Coursera, 2026</span>
+          <div class="cert-actions">
+            <button type="button" class="btn small" data-preview="assets/images/cert-1.jpg" data-title="Google IT Support Professional Certificate">Preview</button>
+            <a class="btn small" href="assets/images/cert-1.jpg" download>Download</a>
+            <a class="btn small" href="https://coursera.org/share/e67f4ad10546176ad417b7020e2ad842" target="_blank" rel="noopener" aria-label="Open the online credential link">Link</a>
+          </div>
+        </li>
+        <li class="cert">
+          <figure class="shot contain">
+            <img src="assets/images/cert-2.jpg" alt="Certificate: Amazon Junior Software Developer Professional Certificate" onerror="this.style.display='none'">
+            <span>Add cert-2.jpg</span>
+          </figure>
+          <strong>Amazon Junior Software Developer Professional Certificate</strong>
+          <span class="issuer">Coursera, 2026</span>
+          <div class="cert-actions">
+            <button type="button" class="btn small" data-preview="assets/images/cert-2.jpg" data-title="Amazon Junior Software Developer Professional Certificate">Preview</button>
+            <a class="btn small" href="assets/images/cert-2.jpg" download>Download</a>
+            <a class="btn small" href="https://coursera.org/share/40518315230776f2e95d495b207b64ed" target="_blank" rel="noopener" aria-label="Open the online credential link">Link</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- EMPLOYMENT REQUIREMENTS -->
+    <section id="requirements" class="plate reveal">
+      <h2>Employment requirements</h2>
+      <p class="plate-sub">These documents are complete and on hand. Copies of any of them can be sent upon request.</p>
+      <div class="req-bar">
+        <div class="req-meter"><span><b id="req-count">0</b> of <b id="req-total">9</b> documents ready</span><div class="req-track"><i id="req-fill"></i></div></div>
+      </div>
+      <ul class="reqs">
+      <li class="req" data-cat="gov" data-alias="sss,social security">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">SSS</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="gov" data-alias="philhealth,phil health">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">PhilHealth</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="gov" data-alias="pag ibig,pagibig,hdmf">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">Pag-IBIG</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="gov" data-alias="nbi">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">NBI Clearance</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="edu" data-alias="diploma">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">Diploma</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req pending" data-cat="edu" data-alias="tor,transcript">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-folder"/></svg></span>
+          <span class="req-text"><span class="req-name">Transcript of Records (TOR)</span><small class="req-sub">Not yet available</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="edu" data-alias="certificate of graduation,graduation">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">Certificate of Graduation</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      <li class="req pending" data-cat="work" data-alias="csc,civil service,eligibility">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-folder"/></svg></span>
+          <span class="req-text"><span class="req-name">CSC Eligibility</span><small class="req-sub">Not yet available</small></span>
+        </div>
+      </li>
+      <li class="req" data-cat="work" data-alias="resume,cv">
+        <div class="req-main">
+          <span class="req-folder" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+          <span class="req-text"><span class="req-name">Resume</span><small class="req-sub">Available upon request</small></span>
+        </div>
+      </li>
+      </ul>
+      <p class="req-note"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Note: I can send any of these requirements upon request. Just reach out through the contact section below.</span></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="plate reveal contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to interviews and new roles. The fastest way to reach me is by email.</p>
+      <ul class="contact-list">
+        <li>
+          <span class="ci"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <div><span class="lbl">Email</span><a href="mailto:vidal.joshuaflorante@gmail.com">vidal.joshuaflorante@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="ci"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <div><span class="lbl">Phone</span><a href="tel:+639242048369">+63 924 204 8369</a></div>
+        </li>
+        <li>
+          <span class="ci"><img class="ico" src="https://cdn.simpleicons.org/viber" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/viber.svg" data-g="i-chat" alt="" width="22" height="22" loading="lazy" decoding="async"></span>
+          <div><span class="lbl">Viber</span><a href="viber://chat?number=%2B639242048369">+63 924 204 8369</a></div>
+        </li>
+        <li>
+          <span class="ci"><img class="ico" src="https://cdn.simpleicons.org/facebook" data-fb="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/facebook/facebook-original.svg" data-g="i-chat" alt="" width="22" height="22" loading="lazy" decoding="async"></span>
+          <div><span class="lbl">Facebook</span><a href="https://www.facebook.com/share/1Dvd8ycqbs/?mibextid=wwXIfr" target="_blank" rel="noopener">Joshua Vidal</a></div>
+        </li>
+        <li>
+          <span class="ci"><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linkedin/linkedin-plain.svg" data-fb="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg" data-g="i-code" alt="" width="22" height="22" loading="lazy" decoding="async"></span>
+          <div><span class="lbl">LinkedIn</span><a href="www.linkedin.com/in/joshua-vidal-aba0ab447" target="_blank" rel="noopener">linkedin.com/in/joshua-vidal-aba0ab447</a></div>
+        </li>
+        <li>
+          <span class="ci"><img class="ico" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" data-fb="https://cdn.simpleicons.org/github" data-g="i-code" alt="" width="22" height="22" loading="lazy" decoding="async"></span>
+          <div><span class="lbl">GitHub</span><a href="https://github.com/ItsJsh1" target="_blank" rel="noopener">github.com/ItsJsh1</a></div>
+        </li>
+        <li>
+          <span class="ci"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <div><span class="lbl">Location</span><span class="val">Bicutan, North Daang Hari, Taguig City, Metro Manila, Philippines</span></div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Joshua Vidal</footer>
+    <dialog id="preview" aria-label="Certificate preview">
+    <div class="box">
+      <button type="button" class="close" aria-label="Close preview">&times;</button>
+      <img id="preview-img" alt="">
+      <p id="preview-title"></p>
+    </div>
+  </dialog>
+
+  <!-- scroll helpers (bottom left) -->
+  <div class="dock">
+    <button class="fab" id="music" type="button" aria-pressed="false" aria-label="Turn music on or off"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-music"/><line class="slash" x1="4" y1="4" x2="20" y2="20"/></svg><span class="fl">Music</span></button>
+    <button class="fab" id="theme" type="button" aria-label="Switch to dark mode"><span class="swap" aria-hidden="true"><svg class="ico sun"><use href="#i-sun"/></svg><svg class="ico moon"><use href="#i-moon"/></svg></span><span class="fl">Dark mode</span></button>
+    <button class="fab up" id="to-top" type="button" aria-label="Back to top"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg><span class="fl">Back to top</span></button>
+    <button class="fab down" id="auto-scroll" type="button" aria-label="Auto scroll down" aria-pressed="false"><svg class="ico a-down" aria-hidden="true"><use href="#i-down"/></svg><svg class="ico a-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="fl">Auto scroll</span></button>
+  </div>
+
+  <!-- Joshyyy chatbot (bottom right) -->
+  <div class="chat" id="chat">
+    <p class="chat-tip" id="chat-tip">Hi, I'm Joshyyy! Ask me anything about Joshua.</p>
+    <section class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat with Joshyyy" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="ico" aria-hidden="true"><use href="#i-joshy"/></svg></span>
+        <div class="chat-title"><strong>Joshyyy</strong><span><i class="live"></i>Online &middot; Joshua's portfolio assistant</span></div>
+        <button class="chat-close" id="chat-close" type="button" aria-label="Close chat"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="chat-body" id="chat-body" aria-live="polite"></div>
+      <div class="chat-suggest" id="chat-suggest"></div>
+      <form class="chat-form" id="chat-form" autocomplete="off">
+        <input id="chat-input" type="text" maxlength="200" placeholder="Ask about Joshua..." aria-label="Type your question">
+        <button type="submit" class="chat-send" aria-label="Send"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
+      </form>
+      <p class="chat-note">Joshyyy answers using the information in this portfolio.</p>
+    </section>
+    <section class="a11y-panel" id="a11y-panel" role="dialog" aria-label="Accessibility options" aria-hidden="true">
+      <div class="chat-head">
+        <span class="chat-avatar"><svg class="ico" aria-hidden="true"><use href="#i-access"/></svg></span>
+        <div class="chat-title"><strong>Accessibility</strong><span>Make this site easier to use</span></div>
+        <button class="chat-close" id="a11y-close" type="button" aria-label="Close accessibility options"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="a11y-body">
+        <div class="size-row">
+          <span class="sw-t"><b>Text size</b><small id="size-val">100%</small></span>
+          <div class="size-btns">
+            <button type="button" id="size-down" aria-label="Smaller text">A&minus;</button>
+            <button type="button" id="size-up" aria-label="Larger text">A+</button>
+          </div>
+        </div>
+        <button class="sw" type="button" role="switch" aria-checked="false" data-key="font"><span class="sw-t"><b>Readable font</b><small>Clear, easy-to-read letters</small></span><i class="knob" aria-hidden="true"></i></button>
+        <button class="sw" type="button" role="switch" aria-checked="false" data-key="spacing"><span class="sw-t"><b>Wider text spacing</b><small>More space between lines and words</small></span><i class="knob" aria-hidden="true"></i></button>
+        <button class="sw" type="button" role="switch" aria-checked="false" data-key="contrast"><span class="sw-t"><b>High contrast</b><small>Stronger colors, no textured background</small></span><i class="knob" aria-hidden="true"></i></button>
+        <button class="sw" type="button" role="switch" aria-checked="false" data-key="links"><span class="sw-t"><b>Highlight links</b><small>Underline and mark every link</small></span><i class="knob" aria-hidden="true"></i></button>
+        <button class="sw" type="button" role="switch" aria-checked="false" data-key="motion"><span class="sw-t"><b>Pause animations</b><small>Stops movement and effects</small></span><i class="knob" aria-hidden="true"></i></button>
+        <button class="a11y-reset" id="a11y-reset" type="button">Reset all settings</button>
+      </div>
+    </section>
+    <button class="assist-btn v" id="voice-btn" type="button" aria-pressed="false" aria-label="Read the page aloud" title="Read aloud">
+      <svg class="ico wave" viewBox="0 0 24 24" aria-hidden="true"><line class="b" x1="3" y1="10" x2="3" y2="14"/><line class="b" x1="6.5" y1="8" x2="6.5" y2="16"/><line class="b" x1="10" y1="5" x2="10" y2="19"/><line class="b" x1="13.5" y1="3" x2="13.5" y2="21"/><line class="b" x1="17" y1="6" x2="17" y2="18"/><line class="b" x1="20.5" y1="9" x2="20.5" y2="15"/></svg>
+    </button>
+    <button class="assist-btn a" id="access-btn" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility options" title="Accessibility">
+      <svg class="ico fig" aria-hidden="true"><use href="#i-access"/></svg>
+      <svg class="ico x" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+    <button class="chat-fab" id="chat-fab" type="button" aria-label="Chat with Joshyyy" aria-expanded="false" aria-controls="chat-panel">
+      <svg class="ico fab-ai" aria-hidden="true"><use href="#i-joshy"/></svg>
+      <svg class="ico fab-x" aria-hidden="true"><use href="#i-x"/></svg>
+      <i class="live"></i>
+    </button>
+  </div>
+
+  <!-- chill background music: put your own file at assets/audio/chill.mp3 to use it instead of the online track -->
+  <audio id="bgm" loop preload="none">
+    <source src="assets/audio/chill.mp3" type="audio/mpeg">
+    <source src="https://archive.org/download/yt-5s.com-no-copyright-10-minutes-lofi-chill-instrumental-beat-mellow-128-kbps/yt5s.com%20-%20%5BNo%20Copyright%5D%2010%20Minutes%20%E2%99%AB%20LOFI%20Chill%20Instrumental%20Beat%20-%20_Mellow_%20%28128%20kbps%29.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
