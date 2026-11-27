@@ -182,6 +182,10 @@ svg.ico{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke
 /* certifications: one image per certificate, add or remove <li class="cert"> blocks freely */
 .certs{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:28px}
 .cert .shot{aspect-ratio:4/3;margin:0 0 14px}
+.cert .shot::before{content:"";position:absolute;inset:0;background:rgba(29,30,32,.44);opacity:0;transition:opacity .28s var(--ease);z-index:1;pointer-events:none}
+.cert .shot:hover::before,.cert .shot:focus-within::before{opacity:1}
+.cert-preview{position:absolute;top:50%;left:50%;z-index:2;transform:translate(-50%,-50%) scale(.94);opacity:0;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease)}
+.cert .shot:hover .cert-preview,.cert .shot:focus-within .cert-preview{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
 .cert strong{display:block;font-family:var(--head);font-size:1.15rem;line-height:1.25}
 .issuer{display:block;margin-top:2px;color:var(--muted);font-size:.95rem}
 
